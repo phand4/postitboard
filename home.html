@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Postit Board</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="logout"><button id="logout-btn" onclick="logout()">Logout</button></div>
+
+<section id="post-note">
+    <button id="open-note-form-btn">+</button>
+
+    <form>
+        <h2>New Post</h2>
+        <label for='input1'>Title:</label><input type='text' id = 'input1' data-key="title" class='user-input'><br>
+        <label for='input2'>Content:</label><input type="text" id = 'input2' data-key="content" class='user-input'><br>
+        <button type="button" id="post-note-btn">Post It</button>
+    </form>
+</section>
+
+<ul id ="noteList">
+
+</ul>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyB5C33P78ViuIxW-JdhJ1fjP97RqVIGPOU",
+        authDomain: "postitboard-bdb36.firebaseapp.com",
+        databaseURL: "https://postitboard-bdb36.firebaseio.com",
+        projectId: "postitboard-bdb36",
+        storageBucket: "postitboard-bdb36.appspot.com",
+        messagingSenderId: "489397805949",
+        appId: "1:489397805949:web:15d14d80555dd62948e214"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
